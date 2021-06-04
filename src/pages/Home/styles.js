@@ -37,15 +37,15 @@ export const ContatinerInput = styled.View`
     width: 100%;
     border-radius: 7px;
     margin: 15px 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 `;
 
 export const BoxIcon = styled.View`
     align-items: center;
     justify-content: center;
     padding-left: 10px;
-    width: 11%;
+    width: 10%;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.15);
     border-top-left-radius: 7px;
@@ -70,7 +70,7 @@ export const ButtonLink = styled.TouchableOpacity`
     justify-content: center;
     height: 45px;
     background-color: ${color.branco};
-    margin: 0 15px;
+    margin: 0 20px;
     border-radius: 7px;
     margin-bottom: 15px;
 `;
