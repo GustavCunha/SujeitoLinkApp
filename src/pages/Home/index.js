@@ -4,9 +4,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {Feather} from '@expo/vector-icons';
 
 import Menu from '../../components/Menu';
+import ModalLink from '../../components/ModalLink';
 import StatusBarPage from '../../components/StatusBarPage';
 
 import { color } from '../../utils/colors';
+import { saveLink } from '../../utils/storeLinks';
+import api from '../../services/api';
 
 import { 
     BoxIcon,
@@ -20,8 +23,6 @@ import {
     SubTitle,
     Title, 
 } from './styles';
-import ModalLink from '../../components/ModalLink';
-import api from '../../services/api';
 
 export default function Home() {
 
@@ -39,6 +40,8 @@ export default function Home() {
 
             setData(response.data);
             setModalVisible(true);
+
+            saveLink('@SujeitoLink:links', response.data);
 
             Keyboard.dismiss();
             setLoading(false);
